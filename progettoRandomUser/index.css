@@ -1,0 +1,165 @@
+/* =====================
+   SFONDO PAGINA
+===================== */
+body {
+    background-image: url("img/icons/wallPaper.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    scale: 0.9;
+}
+
+/* contenitore input */
+#scelta {
+    margin-top: 10px;
+    height: 520px;
+    background-color: rgba(27, 24, 24, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.55);
+    overflow: auto;
+}
+
+/* radio button genere */
+.custom-radio input {
+    display: none;
+}
+
+.radio-label {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.01);
+    margin-left: 5px;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.custom-radio .radio-label:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+}
+
+.custom-radio input:checked + .radio-label {
+    background-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* country */
+.lblCountry {
+    width: 80px;
+    margin-right: 6px;
+}
+
+.lblCountry input {
+    display: none;
+}
+
+.lblCountry .flag-img {
+    width: 120px;
+    margin: 0 auto;
+    border-radius: 6px;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.lblCountry .flag-img:hover {
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.5);
+}
+
+.lblCountry input:checked + .flag-img {
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+    outline: 7px solid #0d6efd;
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* card utente */
+#divUtente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 520px;
+}
+
+.user-card {
+    width: 90%;
+    max-width: 620px;
+    background-color: rgba(27, 24, 24, 0.6);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.55);
+    transform: scale(1.25);
+    transform-origin: left center;
+}
+
+.user-card .user-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(181, 177, 177, 0.75);
+}
+
+/* attiva disattiva griglia */
+.btnGriglia {
+    padding: 8px 14px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.btnGriglia:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 14px 40px rgba(37, 117, 252, 0.28);
+}
+
+.btnGriglia.active {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    box-shadow: 0 14px 40px rgba(37, 117, 252, 0.28);
+}
+
+/* griglia utenti */
+.griglia {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.cella {
+    width: 200px;
+    height: 300px;
+    background-color: rgba(27, 24, 24, 0.6);
+    color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cella img {
+    display: block;
+    margin: 20px auto 10px;
+}
+
+.cella-back {
+    position: absolute;
+    inset: 0;
+    top: auto;
+    padding: 10px;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.6));
+    transform: translateY(100%);
+    transition: transform 260ms ease;
+}
+
+.cella:hover .cella-back {
+    transform: translateY(0);
+}
+
+.cella-back p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
